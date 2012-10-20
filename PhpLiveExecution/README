@@ -1,0 +1,38 @@
+
+                                   ┏━━━━━━━┓
+                                   ✰  Hoa  ✰
+                                   ┗━━━━━━━┛
+
+
+
+Summary
+¯¯¯¯¯¯¯
+  Introduction  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  16
+  Usage  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  21
+  License  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  30
+
+
+
+Introduction
+¯¯¯¯¯¯¯¯¯¯¯¯
+PHP live execution is an example of what is possible to do when combining a
+Websocket server and PHP FastCGI to execute PHP in realtime. Outputs and
+exceptions are indicated directly on the result panel, while errors are
+indicated in the editor.
+
+
+Usage
+¯¯¯¯¯
+We start the PHP FastCGI server:
+    $ php-cgi -b 127.0.0.1:9000&
+
+Then, we start the Websocket server:
+    $ php Server.php
+
+And all you have to do is to open the index.html page in on a browser and type
+some PHP. Enjoy!
+
+
+License
+¯¯¯¯¯¯¯
+Hoa is under the New BSD License. Please, read LICENSE in Hoa's sources.
