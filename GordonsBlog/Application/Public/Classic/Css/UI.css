@@ -20,11 +20,13 @@
     font-style: normal;
 }
 
-html, body {
+html {
     height: 100%;
 }
 
 body {
+    position: relative;
+    min-height: 100%;
     color: #3e0808;
     font: 1.3em/1.4em Text;
     margin: 0 4em;
@@ -32,12 +34,7 @@ body {
     background: #f0f0e8 url("../Image/Background.gif");
 }
 
-#body {
-    position: relative;
-    min-height: 100%;
-}
-
-    #body > :nth-last-child(2) {
+    body > :nth-last-child(2) {
         padding-bottom: 2em !important;
     }
 
