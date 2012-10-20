@@ -6,7 +6,7 @@
       <ul>
         <li>
           <time><value formatter="date"
-                       formatter-format="d/m/Y"
+                       formatter-format="jS M. 'y (H:i)"
                        formatter-timestamp="(?posted)" /></time> • 
           <span bind="?author" />
           <p bind="?content" />
