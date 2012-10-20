@@ -1,0 +1,32 @@
+
+                                   ┏━━━━━━━┓
+                                   ✰  Hoa  ✰
+                                   ┗━━━━━━━┛
+
+
+
+Summary
+¯¯¯¯¯¯¯
+  Introduction  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  16
+  Usage  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  21
+  License  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  30
+
+
+
+Introduction
+¯¯¯¯¯¯¯¯¯¯¯¯
+SoChatty is an example of a realtime chat based on the Websocket protocol.
+
+
+Usage
+¯¯¯¯¯
+We start the Websocket server:
+    $ php Server.php
+
+And all you have to do is to open the index.html page in many browsers with
+different devices. Enjoy SoChatty!
+
+
+License
+¯¯¯¯¯¯¯
+Hoa is under the New BSD License. Please, read LICENSE in Hoa's sources.
