@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<overlay xmlns="http://hoa-project.net/xyl/xylophone">
+  <div id="main">
+    <p>Here is the list of all articles I have written:</p>
+    <ul>
+      <li bind="?articles">
+        <time><value formatter="date"
+                     formatter-format="d/m/Y"
+                     formatter-timestamp="(?posted)" /></time> — 
+        <a href="@a:id=(?id)" bind="?title" />
+      </li>
+    </ul>
+  </div>
+</overlay>

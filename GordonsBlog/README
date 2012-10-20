@@ -1,0 +1,37 @@
+
+                                   ┏━━━━━━━┓
+                                   ✰  Hoa  ✰
+                                   ┗━━━━━━━┛
+
+
+
+Summary
+¯¯¯¯¯¯¯
+  Introduction  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  16
+  Usage  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  22
+  License  ⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅  35
+
+
+
+Introduction
+¯¯¯¯¯¯¯¯¯¯¯¯
+The Gordon's blog is an example of a blog that will be used in Hoa's
+documentation along chapters.
+
+
+Usage
+¯¯¯¯¯
+We start PHP FastCGI:
+    $ php-cgi -b 127.0.0.1:9000&
+    or
+    $ php-fpm -d listen=127.0.0.1:9000
+
+Then, we start Bhoa to get a quick look of the application:
+    $ Data/Bin/myapp bhoa --root hoa://Application/Public
+
+Finally, go to http://127.0.0.1:8888 to view the Gordon's blog!
+
+
+License
+¯¯¯¯¯¯¯
+Hoa is under the New BSD License. Please, read LICENSE in Hoa's sources.
