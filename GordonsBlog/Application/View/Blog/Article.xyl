@@ -11,6 +11,20 @@
     </yield>
 
     <h2>Comments</h2>
+
+    <form>
+      <ul>
+        <li>
+          <small><time><value formatter="date"
+                              formatter-format="jS M. 'y (H:i)" /></time></small>
+         <input type="text" id="username" name="username"
+                required="true" maxlength="42" placeholder="Author" />
+         <textarea id="comment" name="comment" placeholder="Comment…" />
+        <input type="submit" value="➜" />
+        </li>
+      </ul>
+    </form>
+
     <comment bind="?comments" />
   </div>
 </overlay>

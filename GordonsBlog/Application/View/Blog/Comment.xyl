@@ -5,9 +5,9 @@
     <div class="comment">
       <ul>
         <li>
-          <time><value formatter="date"
-                       formatter-format="jS M. 'y (H:i)"
-                       formatter-timestamp="(?posted)" /></time> • 
+          <small><time><value formatter="date"
+                              formatter-format="jS M. 'y (H:i)"
+                              formatter-timestamp="(?posted)" /></time></small>
           <span bind="?author" />
           <p bind="?content" />
         </li>

@@ -54,10 +54,11 @@ footer > p {
     text-align: center;
 }
 
-p {
+p, textarea {
     text-align: justify;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 h1, h2 {
@@ -87,20 +88,6 @@ h1, h2 {
         text-shadow: #bcbcb5 -1px 1px;
         padding: 1em 0 .5em 0;
     }
-
-        h2:before {
-            content: "➠";
-            position: absolute;
-            left: -2em;
-            opacity: 0;
-            font-size: 50%;
-            -moz-transition: left .4s, opacity .4s;
-        }
-
-        h2:hover:before {
-            left: -1.2em;
-            opacity: 1;
-        }
 
         h2:first-of-type {
             padding-top: .5em;
@@ -135,3 +122,37 @@ ul > li {
     ul li:hover:before {
         color: #da392e;
     }
+
+form {
+}
+
+input {
+    width: 30%;
+}
+
+input, textarea {
+    font: inherit;
+    text-shadow: inherit;
+    outline: none;
+    border: 1px transparent solid;
+    background: #ddddd5;
+}
+
+    input:focus, textarea:focus {
+        border: 1px #ddddd5 solid;
+        background: transparent;
+    }
+
+textarea {
+    display: inline-block;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    font: 1.5em Title;
+    color: #fff;
+    display: inline;
+    margin: 0 auto;
+    width: 100%;
+    background: #da392e;
+}
