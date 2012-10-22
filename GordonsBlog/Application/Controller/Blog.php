@@ -4,7 +4,8 @@ namespace {
 
 from('Application')
 -> import('Model.Article')
--> import('Model.Comment');
+-> import('Model.Comment')
+-> import('View.Formatter');
 
 }
 
@@ -64,7 +65,11 @@ class Blog extends \Hoa\Dispatcher\Kit {
 
     public function ErrorAction ( \Exception $exception ) {
 
-        echo $exception->getFormattedMessage();
+        if($exception instanceof \Hoa\Core\Exception)
+            echo $exception->getFormattedMessage();
+        else
+            echo $exception->getMessage();
+
         exit;
     }
 }

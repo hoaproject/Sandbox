@@ -9,7 +9,8 @@
                               formatter-format="jS M. 'y (H:i)"
                               formatter-timestamp="(?posted)" /></time></small>
           <span bind="?author" />
-          <p bind="?content" />
+          <p><value bind="?content"
+                    formatter="Application\View\Formatter::html" /></p>
         </li>
       </ul>
     </div>
