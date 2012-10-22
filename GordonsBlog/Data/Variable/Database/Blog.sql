@@ -1,6 +1,8 @@
 DROP TABLE IF EXISTS article;
 DROP TABLE IF EXISTS comment;
 
+PRAGMA foreign_keys = ON;
+
 CREATE TABLE article (
     id      INTEGER,
     title   VARCHAR(255),
