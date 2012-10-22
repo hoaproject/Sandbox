@@ -35,14 +35,12 @@ class Blog extends \Hoa\Dispatcher\Kit {
         if(   true === $form->hasBeenSent()
            && true === $form->isValid()) {
 
-            $formData = $form->getData();
-            $comment  = new \Application\Model\Comment();
-            $comment->insert(array(
-                'article'  => $id,
-                'author'   => $formData['username'],
-                'posted'   => time(),
-                'content'  => $formData['comment']
-            ));
+            $formData         = $form->getData();
+            $comment          = new \Application\Model\Comment();
+            $comment->author  = $formData['username'];
+            $comment->posted  = time();
+            $comment->content = $formData['comment'];
+            $comment->save($id);
 
             $this->view->getOutputStream()->sendHeader(
                 'Location',

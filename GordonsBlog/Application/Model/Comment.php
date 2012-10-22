@@ -49,9 +49,7 @@ class Comment extends \Hoa\Model {
         return;
     }
 
-    public function insert ( Array $contraints = array() ) {
-
-        $constraints = array_merge($this->getConstraints(), $contraints);
+    public function save ( $articleId = null ) {
 
         $this->getMappingLayer()->query('PRAGMA foreign_keys = ON');
         $this->getMappingLayer()
@@ -65,7 +63,10 @@ class Comment extends \Hoa\Model {
                  '    :content' .
                  ')'
              )
-             ->execute($constraints);
+             ->execute(array_merge(
+                $this->getConstraints(),
+                array('article' => $articleId)
+            ));
 
         return;
     }
