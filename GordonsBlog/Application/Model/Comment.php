@@ -53,8 +53,7 @@ class Comment extends \Hoa\Model {
 
         $constraints = array_merge($this->getConstraints(), $contraints);
 
-        $this->getMappingLayer()->query('PRAGMA foreign_keys = ON;');
-
+        $this->getMappingLayer()->query('PRAGMA foreign_keys = ON');
         $this->getMappingLayer()
              ->prepare(
                  'INSERT INTO comment ' .
