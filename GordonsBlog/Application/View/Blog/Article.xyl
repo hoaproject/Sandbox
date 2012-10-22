@@ -21,7 +21,7 @@
                  required="true" maxlength="31" placeholder="Author…"
                  error="not_empty" />
           <textarea id="comment" name="comment"
-                    required="true" placeholder="Comment…"
+                    required="true" maxlength="4096" placeholder="Comment…"
                     error="not_empty" />
           <error id="not_empty">
             <p>It appears you forgot to fill the author or the comment.</p>
