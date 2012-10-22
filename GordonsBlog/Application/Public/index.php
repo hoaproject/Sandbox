@@ -24,7 +24,8 @@ Hoa\Database\Dal::initializeParameters(array(
 $dispatcher = new Hoa\Dispatcher\Basic();
 $router     = new Hoa\Router\Http();
 $router->get('i', '/', 'blog', 'index')
-       ->get('a', '/article-(?<id>\d+)\.html', 'blog', 'article');
+       ->get_post('a', '/article-(?<id>\d+)\.html', 'blog', 'article')
+       ->all('e', '/error\.html', 'blog', 'error');
 
 try {
 
@@ -38,9 +39,12 @@ try {
         )
     );
 }
-catch ( Hoa\Router\Exception\NotFound $e ) {
+catch ( Exception $e ) {
 
-    echo 'Your page seems to be not found /o\.', "\n";
+    $router->route('/error.html');
+    $rule                                               = &$router->getTheRule();
+    $rule[Hoa\Router\Http::RULE_VARIABLES]['exception'] = $e;
+    $dispatcher->dispatch($router);
 }
 
 }

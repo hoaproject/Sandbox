@@ -57,20 +57,26 @@ class Article extends \Hoa\Model {
             throw new \Hoa\Model\Exception('The constraint “id” is needed.', 0);
 
         $data = $this->getMappingLayer()
-                    ->prepare(
-                        'SELECT id, title, content ' .
-                        'FROM   article ' .
-                        'WHERE  id = :id'
-                    )
-                    ->execute($constraints)
+                     ->prepare(
+                         'SELECT id, title, content ' .
+                         'FROM   article ' .
+                         'WHERE  id = :id'
+                     )
+                     ->execute($constraints)
                     ->fetchAll();
+
+        if(empty($data))
+            throw new \Hoa\Model\Exception(
+                'Article %d does not exist.', 1, $constraints['id']);
+
         $this->map($data[0]);
         $this->comments->map(
             $this->getMappingLayer()
                  ->prepare(
                      'SELECT id, posted, author, content ' .
-                     'FROM   comment '.
-                     'WHERE  article = :article'
+                     'FROM   comment ' .
+                     'WHERE  article = :article ' .
+                     'ORDER BY posted DESC'
                  )
                  ->execute(array('article' => $constraints['id']))
                  ->fetchAll()

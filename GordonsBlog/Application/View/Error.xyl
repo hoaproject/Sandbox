@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xyl-use href="hoa://Application/View/Blog/Comment.xyl"?>
+
+<overlay xmlns="http://hoa-project.net/xyl/xylophone">
+  <div id="main">
+    <p>An error occured :-(.</p>
+  </div>
+</overlay>

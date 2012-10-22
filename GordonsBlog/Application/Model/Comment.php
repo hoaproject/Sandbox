@@ -48,6 +48,28 @@ class Comment extends \Hoa\Model {
 
         return;
     }
+
+    public function insert ( Array $contraints = array() ) {
+
+        $constraints = array_merge($this->getConstraints(), $contraints);
+
+        $this->getMappingLayer()->query('PRAGMA foreign_keys = ON;');
+
+        $this->getMappingLayer()
+             ->prepare(
+                 'INSERT INTO comment ' .
+                 'VALUES (' .
+                 '    NULL,' .
+                 '    :article,' .
+                 '    :author,' .
+                 '    :posted,' .
+                 '    :content' .
+                 ')'
+             )
+             ->execute($constraints);
+
+        return;
+    }
 }
 
 }

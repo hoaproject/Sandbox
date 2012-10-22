@@ -126,30 +126,62 @@ ul > li {
 form {
 }
 
+div.error {
+    position: relative;
+    color: #fff;
+    text-shadow: none;
+    margin: .3em 0;
+    padding: .4em 2em;
+    background: #da392e;
+}
+
+    div.error::before,
+    div.error::after {
+        content: "✖";
+        position: absolute;
+        top: .5em;
+    }
+
+    div.error::before {
+        left: 1em;
+    }
+
+    div.error::after {
+        right: 1em;
+    }
+
+    div.error > p {
+        text-align: center;
+    }
+
 input {
-    width: 30%;
+    width: 40%;
 }
 
 input, textarea {
     font: inherit;
     text-shadow: inherit;
     outline: none;
-    border: 1px transparent solid;
+    border: 2px transparent solid;
     background: #ddddd5;
 }
 
     input:focus, textarea:focus {
-        border: 1px #ddddd5 solid;
+        border: 2px #ddddd5 solid;
         background: transparent;
     }
 
 textarea {
     display: inline-block;
+    box-sizing:         border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
     resize: vertical;
 }
 
 input[type="submit"] {
     font: 1.5em Title;
+    text-shadow: none;
     color: #fff;
     display: inline;
     margin: 0 auto;
