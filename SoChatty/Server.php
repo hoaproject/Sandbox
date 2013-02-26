@@ -47,7 +47,9 @@ $ws->getServer()->setNodeName('Node');
 $ws->on('message', function ( \Hoa\Core\Event\Bucket $bucket ) {
 
     $self    = $bucket->getSource();
-    $message = $bucket->getData();
+    $data    = $bucket->getData();
+
+    $message = $data['message'];
     $nodes   = $self->getServer()->getNodes();
     $cNode   = $self->getServer()->getCurrentNode();
     $id      = $cNode->getId();
@@ -107,8 +109,9 @@ $ws->on('close', function ( \Hoa\Core\Event\Bucket $bucket ) {
  */
 $ws->on('error', function ( \Hoa\Core\Event\Bucket $bucket ) {
 
+    $data = $bucket->getData();
     $file = new \Hoa\File\Write(__DIR__ . DS . 'Exceptions.log');
-    $file->writeAll($bucket->getData()->raise() . "\n");
+    $file->writeAll($data['exception']->raise() . "\n");
 
     return;
 });
