@@ -52,7 +52,6 @@ $ws->on('message', function ( \Hoa\Core\Event\Bucket $bucket ) {
     $message = $data['message'];
     $nodes   = $self->getServer()->getNodes();
     $cNode   = $self->getServer()->getCurrentNode();
-    $id      = $cNode->getId();
 
     if(true === $cNode->isFirstMessage()) {
 
@@ -76,7 +75,7 @@ $ws->on('message', function ( \Hoa\Core\Event\Bucket $bucket ) {
             }, $nodes)), $node);
             $node->setFirst(false);
         }
-        elseif($id != $node->getId())
+        elseif($node !== $cNode)
             $self->send($message, $node);
 
     return;
@@ -89,16 +88,15 @@ $ws->on('close', function ( \Hoa\Core\Event\Bucket $bucket ) {
 
     $self    = $bucket->getSource();
     $nodes   = $self->getServer()->getNodes();
-    $node    = $self->getServer()->getCurrentNode();
-    $id      = $node->getId();
-    $message = 'd;' . $node->getNick();
+    $cNode   = $self->getServer()->getCurrentNode();
+    $message = 'd;' . $cNode->getNick();
 
     echo "\r",
-         '- ', $node->getNick(), ' has left.', "\n",
+         '- ', $cNode->getNick(), ' has left.', "\n",
          ($c = count($nodes) -1), ' geek', (1 < $c ? 's' : ''), '.';
 
     foreach($nodes as $node)
-        if($id != $node->getId())
+        if($node !== $cNode)
             $self->send($message, $node);
 
     return;
